@@ -1,4 +1,6 @@
-def check_queen_move(x, y, white_locations, black_locations):
+from chess import white_locations, black_locations
+
+def check_queen_move(x, y):
     queen_moves = []
     step = 1
     while x + step < 8 and y + step < 8:
@@ -85,7 +87,7 @@ def check_king_move(x, y):
         king_moves.append((x + 1, y - 1))
     return king_moves
 
-def check_rook_move(x, y, white_locations, black_locations):
+def check_rook_move(x, y):
     rook_moves = []
     c = 1
     while x + c < 8:
@@ -153,7 +155,7 @@ def check_knight_move(x, y):
         knight_moves.append((x - 1, y - 2))
     return knight_moves
 
-def check_pawn_move(x, y, color, white_locations, black_locations):
+def check_pawn_move(x, y, color):
     if color == 'white':
         if (x, y - 1) not in black_locations and (x, y - 1) not in white_locations:
             pawn_moves = [(x, y - 1)]
