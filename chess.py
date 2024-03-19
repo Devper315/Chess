@@ -61,6 +61,19 @@ def draw_pieces():
             screen.blit(white_rook_image, white_locations[i][0] * 100, white_locations[i][1] * 100)
         if white_pieces[i] == 'pawn':
             screen.blit(white_pawn_image, white_locations[i][0] * 100, white_locations[i][1] * 100)
+    for i in range(len(black_pieces)):
+        if black_pieces[i] == 'king':
+            screen.blit(black_king_image, black_locations[i][0] * 100, black_locations[i][1] * 100)
+        if black_pieces[i] == 'queen':
+            screen.blit(black_queen_image, black_locations[i][0] * 100, black_locations[i][1] * 100)
+        if black_pieces[i] == 'bishop':
+            screen.blit(black_bishop_image, black_locations[i][0] * 100, black_locations[i][1] * 100)
+        if black_pieces[i] == 'knight':
+            screen.blit(black_knight_image, black_locations[i][0] * 100, black_locations[i][1] * 100)
+        if black_pieces[i] == 'rook':
+            screen.blit(black_rook_image, black_locations[i][0] * 100, black_locations[i][1] * 100)
+        if black_pieces[i] == 'pawn':
+            screen.blit(black_pawn_image, black_locations[i][0] * 100, black_locations[i][1] * 100)
 
 pygame.init()
 draw_board()
